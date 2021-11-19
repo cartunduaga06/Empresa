@@ -1,0 +1,31 @@
+@startuml
+abstract class Empleado {
+- String nombre
+- String apellido
+- String dni
++ void trabajar()
++ void descansar()
++ String toString()
++ String getNombre()
++ String getApellido()
+}
+class EmpleadoMarketing {
+- String area
++ void trabajar()
++ void trabajar(int)
+}
+
+class EmpleadoProduccion {
+- int tiempoExperiencia
++ void trabajar()
+}
+class EmpleadoRRHH {
+- int altasLogradas
++ void trabajar()
+}
+
+
+Empleado <|-- EmpleadoMarketing
+Empleado <|-- EmpleadoProduccion
+Empleado <|-- EmpleadoRRHH
+@enduml
